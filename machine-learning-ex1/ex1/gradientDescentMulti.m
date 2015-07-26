@@ -19,12 +19,12 @@ for iter = 1:num_iters
     %
 
 
+
     temp_theta(1) = theta(1) - (alpha/m)*sum( (X*theta) - y );
     for ind = 2:size(X,2)
         temp_theta(ind) = theta(ind) - (alpha/m)*sum( ((X*theta) - y).*X(:,ind) );
     end
     theta = temp_theta;
-
 
 
 
